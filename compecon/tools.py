@@ -39,11 +39,11 @@ def gridmake(*arrays):
     arrays = np.atleast_2d(*arrays)
     n = len(arrays)
     idx = np.indices([a.shape[1] for a in arrays]).reshape([n, -1])
-    return np.vstack(arrays[k][:, idx[k]] for k in range(n))
+    return np.vstack([arrays[k][:, idx[k]] for k in range(n)])
 
 
 def indices(*args):
-    return np.array([a.flatten() for a in np.indices(args)])
+    return np.array(a.flatten() for a in np.indices(args))
 
 
 def ckron(*arrays, invert=False):
