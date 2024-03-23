@@ -11,7 +11,7 @@ with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='compecon',
+    name='compecon_1',
     version='2022.09.09',
     description='A Computational Economics Toolbox',
     long_description=long_description,
